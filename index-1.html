@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web / CSS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fc;
+        }
+
+        .page {
+            height: 100vh;
+            background-color: #f8f9fc;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: 50px auto;
+            grid-template-areas: "logo logo logo logo nav nav nav nav nav nav"
+                "content content content content content img img img img img ";
+        }
+
+        .logo {
+            grid-area: logo;
+            background-color: #f8f9fc;
+            color: black;
+            margin: 0;
+            padding-top: 17px;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.5s ease;
+            text-decoration-color: transparent;
+        }
+
+        a:hover {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 7px;
+            text-decoration-color: #FDC435;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: rgba(253, 196, 53, 0);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 50px;
+        }
+
+        img {
+            grid-area: img;
+            width: 95%;
+            height: 95%;
+            margin-bottom: -40px;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #f8f9fc;
+            color: black;
+            padding: 20px;
+            margin-left: 50px;
+
+        }
+
+        .p1 {
+            color: #FDC435;
+            font-size: 22px;
+        }
+
+        .p2 {
+            color: #6d6d6d;
+            font-size: 25px;
+        }
+
+        h1 {
+            font-size: 55px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .btn1 {
+            background-color: rgb(253, 196, 53);
+            border-radius: 5px;
+            height: 40px;
+            width: 150px;
+            transition: 0.4s;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        .btn1:hover {
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: #a07f29;
+            text-decoration: none;
+        }
+
+        .btn2 {
+            background-color: white;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            height: 40px;
+            width: 120px;
+            transition: 0.4s;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        .btn2:hover {
+            background-color: #000000;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .projects {
+            width: 300px;
+            margin: auto;
+        }
+
+        /*//////////////////////////////////////// Projects //////////////////////////////////*/
+        .title-project {
+            text-decoration: underline;
+            text-decoration-thickness: 5px;
+            text-underline-offset: 15px;
+            text-decoration-color: #FDC435;
+        }
+
+        /*//////////////////////////////////////// First Project //////////////////////////////////*/
+
+        .project-card1 {
+            width: 900px;
+            background-color: white;
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-left: -300px;
+
+        }
+
+        .project-text1 {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-text1 h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .project-text1 p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .btn-view {
+            border: 1.5px solid black;
+            width: 100px;
+            height: 20px;
+            text-align: center;
+        }
+
+        .btn-view:hover {
+            font-size: 18px;
+            background-color: #000000;
+            color: white;
+            text-decoration: none;
+            width: 100px;
+            height: 20px;
+        }
+
+        .project-image1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /*//////////////////////////////////////// second Project //////////////////////////////////*/
+
+        .project-card2 {
+            width: 900px;
+            background-color: white;
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-left: -300px;
+
+        }
+
+        .project-text2 {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-text2 h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .project-text2 p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .btn-view {
+            border: 1.5px solid black;
+            width: 100px;
+            height: 20px;
+            text-align: center;
+        }
+
+        .btn-view:hover {
+            font-size: 18px;
+            background-color: #000000;
+            color: white;
+            text-decoration: none;
+            width: 100px;
+            height: 20px;
+        }
+
+        .project-image2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /*//////////////////////////////////////// third Project //////////////////////////////////*/
+
+        .project-card3 {
+            width: 900px;
+            background-color: white;
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(185, 125, 13, 0.05);
+            margin-left: -300px;
+
+        }
+
+        .project-text3 {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-text3 h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .project-text3 p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .btn-view {
+            border: 1.5px solid black;
+            width: 100px;
+            height: 20px;
+            text-align: center;
+        }
+
+        .btn-view:hover {
+            font-size: 18px;
+            background-color: #000000;
+            color: white;
+            text-decoration: none;
+            width: 100px;
+            height: 20px;
+        }
+
+        .project-image3 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            width: 100%;
+            height: 100px;
+            background-color: #f8f9fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer div {
+            color: #030303;
+            width: 40px;
+            height: 20px;
+        }
+
+        i {
+            font-size: 25px;
+
+        }
+
+        footer a {
+            padding: 10px;
+        }
+
+        .name {
+            font-size: 15px;
+            color: #6d6d6d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="logo"> Modelyn Torff </div>
+        <nav>
+            <ul>
+                <li><a href="./about.html" target="_blank">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact-me">Contacts</a></li>
+            </ul>
+        </nav>
+        <section class="content">
+            <p class="p1">UI/UX DESIGNER</p>
+            <h1>
+                Hello, my name<br>
+                is Modelyn Torff
+            </h1>
+            <p class="p2">
+                Short text with details about you, what you <br><br> do or your professional career.
+                You can add <br><br> more information on the about page.
+            </p>
+            <br>
+            <a href="#projects" class="btn1">Projects</a>
+            <a href="https://www.linkedin.com/in/abdelrhman-yasser-a3734830b/" target="_blank" class="btn2">Linkedin</a>
+        </section>
+
+        <img src="./1ehg.png">
+    </div>
+    <section class="projects" id="projects">
+        <h1 class="title-project">Projects</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="project-card1">
+            <div class="project-text1">
+                <h2>Project Name</h2>
+                <p>
+                    I created this personal project in order to show
+                    how to create an interface in Figma using a
+                    portfolio as an example.
+                </p>
+                <a href="" class="btn-view">View Project</a>
+            </div>
+            <div class="project-image1">
+                <img src="./pexels-elly-fairytale-3823207 1.png" alt="Project Image">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="project-card2">
+            <div class="project-text2">
+                <h2>Project Name</h2>
+                <p>
+                    What was your role, your deliverable, if the
+                    project was personal, freelancing.
+                </p>
+                <a href="" class="btn-view">View Project</a>
+            </div>
+            <div class="project-image2">
+                <img src="./Rectangle 7.png" alt="Project Image">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="project-card3">
+            <div class="project-text3">
+                <h2>Project Name</h2>
+                <p>
+                    What was your role, your deliverable, if the
+                    project was personal, freelancing.
+                </p>
+                <a href="" class="btn-view">View Project</a>
+            </div>
+            <div class="project-image3">
+                <img src="./Rectangle 7 (1).png" alt="Project Image">
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <footer id="contact-me">
+        <div><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></div>
+        <div><a href="www.linkedin.com/in/abdelrhman-yasser-a3734830b"><i class="fa-brands fa-linkedin"></i></a></div>
+        <div><a href="abdelrhmanyasser644@gmail.com"><i class="fa-solid fa-envelope"></i></a></div>
+    </footer>
+    <p class="name">Abdelrhman Yasser 2025</p>
+</body>
+
+</html>
