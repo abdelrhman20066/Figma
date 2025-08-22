@@ -1,0 +1,334 @@
+  html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fc;
+        }
+
+        .page {
+            height: 100vh;
+            background-color: #f8f9fc;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: 50px auto;
+            grid-template-areas:
+                "logo logo logo logo nav nav nav nav nav nav"
+                "content content content content content img img img img img";
+        }
+
+        .logo {
+            grid-area: logo;
+            background-color: #f8f9fc;
+            color: black;
+            margin: 0;
+            padding-top: 17px;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.5s ease;
+            text-decoration-color: transparent;
+        }
+
+        a:hover {
+            border-radius: 20px;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 7px;
+            text-decoration-color: #FDC435;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: rgba(253, 196, 53, 0);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+            height: 50px;
+            padding-right: 20px;
+        }
+
+        img {
+            grid-area: img;
+            width: 95%;
+            height: auto;
+            margin-bottom: -40px;
+            max-width: 100%;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #f8f9fc;
+            color: black;
+            padding: 20px;
+            margin-left: 50px;
+        }
+
+        .p1 {
+            color: #FDC435;
+            font-size: 22px;
+        }
+
+        .p2 {
+            color: #6d6d6d;
+            font-size: 25px;
+        }
+
+        h1 {
+            font-size: 55px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+                'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .btn1 {
+            background-color: rgb(253, 196, 53);
+            border-radius: 5px;
+            height: 40px;
+            width: 150px;
+            transition: 0.4s;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        .btn1:hover {
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: #a07f29;
+            text-decoration: none;
+        }
+
+        .btn2 {
+            background-color: white;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            height: 40px;
+            width: 120px;
+            transition: 0.4s;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        .btn2:hover {
+            background-color: #000000;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .projects {
+            width: 90%;
+            margin: auto;
+        }
+
+        .title-project {
+            text-decoration: underline;
+            text-decoration-thickness: 5px;
+            text-underline-offset: 15px;
+            text-decoration-color: #FDC435;
+        }
+
+        /*//////////////// Project Cards ////////////////*/
+        .project-card1,
+        .project-card2,
+        .project-card3 {
+            width: 100%;
+            max-width: 900px;
+            background-color: white;
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin: 20px auto;
+        }
+
+        .project-text1,
+        .project-text2,
+        .project-text3 {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-text1 h2,
+        .project-text2 h2,
+        .project-text3 h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .project-text1 p,
+        .project-text2 p,
+        .project-text3 p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .btn-view {
+            border: 1.5px solid black;
+            width: 120px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .btn-view:hover {
+            font-size: 18px;
+            background-color: #000000;
+            color: white;
+            text-decoration: none;
+        }
+
+        .project-image1 img,
+        .project-image2 img,
+        .project-image3 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            width: 100%;
+            height: 100px;
+            background-color: #f8f9fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer div {
+            color: #030303;
+            width: 40px;
+            height: 20px;
+        }
+
+        i {
+            font-size: 25px;
+        }
+
+        footer a {
+            padding: 10px;
+        }
+
+        .name {
+            font-size: 15px;
+            color: #6d6d6d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /*/////////////// Responsive Design ///////////////*/
+        @media (max-width: 992px) {
+            .page {
+                grid-template-areas:
+                    "logo nav"
+                    "content content"
+                    "img img";
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .p2 {
+                font-size: 20px;
+            }
+
+            nav {
+                justify-content: flex-end;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            .project-card1,
+            .project-card2,
+            .project-card3 {
+                grid-template-columns: 1fr;
+            }
+
+            .project-image1,
+            .project-image2,
+            .project-image3 {
+                order: -1;
+            }
+
+            nav ul {
+                padding: 0;
+            }
+
+            nav li {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .p1 {
+                font-size: 18px;
+            }
+
+            .p2 {
+                font-size: 16px;
+            }
+
+            .btn1,
+            .btn2 {
+                width: 100px;
+                height: 35px;
+                font-size: 14px;
+            }
+
+            .btn-view {
+                width: 100px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 5px;
+                height: auto;
+            }
+        }
